@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art DOM Selectors Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app">
+        <div id="image-canvas-container">
+            
+            <div id="canvas">
+                <h2>Votre Canvas</h2>
+                <div class="grid">
+                    <!-- Interactive pixel grid goes here -->
+                    <div>
+                        <div class="pixel to-red" id="pixel-1"></div>
+                        <div class="pixel" id="pixel-2"></div>
+                        <div class="pixel" id="pixel-3"></div>
+                        <div class="pixel" id="pixel-4"></div>
+                    </div>
+                    <div>
+                        <div class="pixel to-red" id="pixel-5"></div>
+                        <div class="pixel" id="pixel-6"></div>
+                        <div class="pixel" id="pixel-7"></div>
+                        <div class="pixel" id="pixel-8"></div>
+                    </div>
+                    <div>
+                        <div class="pixel to-red" id="pixel-9"></div>
+                        <div class="pixel" id="pixel-10"></div>
+                        <div class="pixel" id="pixel-11"></div>
+                        <div class="pixel" id="pixel-12"></div>
+                    </div>
+                    <div>
+                        <div class="pixel to-red" id="pixel-13"></div>
+                        <div class="pixel" id="pixel-14"></div>
+                        <div class="pixel" id="pixel-15"></div>
+                        <div class="pixel" id="pixel-16"></div>
+                    </div>
+                    <!-- Add more pixels to create the grid -->
+                </div>
+            </div>
+            <div id="target-image">
+                <h2>Pikachu</h2>
+                <img src="pikachu.png" alt="Pikachu">
+            </div>
+        </div>
+        
+        
+        <div id="selectors">
+            <h2>Complétez le code</h2>
+            <p>document.getElementById('<input type="text" id="selector-id" placeholder="id">').style.<input type="text" id="selector-property" placeholder="property"> = '<input type="text" id="selector-value" placeholder="value">';</p>
+            <button id="apply">Appliquer</button>
+        </div>
+        <div id="code">
+            <pre><code class="language-html">
+                <!-- Code will be injected here by JavaScript -->
+            </code></pre>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
