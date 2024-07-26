@@ -6,60 +6,51 @@
     <title>Pixel Art DOM Selectors Game</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
     <div id="app">
+        <h2>Pikachu</h2>
         <div id="image-canvas-container">
-            
             <div id="canvas">
-                <h2>Votre Canvas</h2>
                 <div class="grid">
                     <!-- Interactive pixel grid goes here -->
-                    <div>
-                        <div class="pixel to-red" id="pixel-1"></div>
-                        <div class="pixel" id="pixel-2"></div>
-                        <div class="pixel" id="pixel-3"></div>
-                        <div class="pixel" id="pixel-4"></div>
-                    </div>
-                    <div>
-                        <div class="pixel to-red" id="pixel-5"></div>
-                        <div class="pixel" id="pixel-6"></div>
-                        <div class="pixel" id="pixel-7"></div>
-                        <div class="pixel" id="pixel-8"></div>
-                    </div>
-                    <div>
-                        <div class="pixel to-red" id="pixel-9"></div>
-                        <div class="pixel" id="pixel-10"></div>
-                        <div class="pixel" id="pixel-11"></div>
-                        <div class="pixel" id="pixel-12"></div>
-                    </div>
-                    <div>
-                        <div class="pixel to-red" id="pixel-13"></div>
-                        <div class="pixel" id="pixel-14"></div>
-                        <div class="pixel" id="pixel-15"></div>
-                        <div class="pixel" id="pixel-16"></div>
-                    </div>
-                    <!-- Add more pixels to create the grid -->
+                    <div class="pixel to-red" id="pixel-1"></div>
+                    <div class="pixel" id="pixel-2"></div>
+                    <div class="pixel" id="pixel-3"></div>
+                    <div class="pixel" id="pixel-4"></div>
+                    <div class="pixel to-red" id="pixel-5"></div>
+                    <div class="pixel" id="pixel-6"></div>
+                    <div class="pixel" id="pixel-7"></div>
+                    <div class="pixel" id="pixel-8"></div>
+                    <div class="pixel to-red" id="pixel-9"></div>
+                    <div class="pixel" id="pixel-10"></div>
+                    <div class="pixel" id="pixel-11"></div>
+                    <div class="pixel" id="pixel-12"></div>
+                    <div class="pixel to-red" id="pixel-13"></div>
+                    <div class="pixel" id="pixel-14"></div>
+                    <div class="pixel" id="pixel-15"></div>
+                    <div class="pixel" id="pixel-16"></div>
                 </div>
             </div>
             <div id="target-image">
-                <h2>Pikachu</h2>
                 <img src="pikachu.png" alt="Pikachu">
             </div>
         </div>
         
-        
         <div id="selectors">
-            <h2>Complétez le code</h2>
-            <p>document.getElementById('<input type="text" id="selector-id" placeholder="id">').style.<input type="text" id="selector-property" placeholder="property"> = '<input type="text" id="selector-value" placeholder="value">';</p>
+            <p><input type="checkbox" id="checkbox-1"><span>getElementById</span>('<input type="text" id="selector-id-1" placeholder="id">').style.<input type="text" id="selector-property-1" placeholder="property"> = '<input type="text" id="selector-value-1" placeholder="value"></p>
+            <p><input type="checkbox" id="checkbox-2">document.<span>getElementsByClassName</span>('<input type="text" id="selector-id-2" placeholder="class">').style.<input type="text" id="selector-property-2" placeholder="property"> = '<input type="text" id="selector-value-2" placeholder="value"></p>
+            <p><input type="checkbox" id="checkbox-3">document.<span>querySelector</span>('<input type="text" id="selector-id-3" placeholder="selector">').style.<input type="text" id="selector-property-3" placeholder="property"> = '<input type="text" id="selector-value-3" placeholder="value"></p>
+            <p><input type="checkbox" id="checkbox-4">document.<span>querySelectorAll</span>('<input type="text" id="selector-id-4" placeholder="selector">').style.<input type="text" id="selector-property-4" placeholder="property"> = '<input type="text" id="selector-value-4" placeholder="value"></p>
             <button id="apply">Appliquer</button>
         </div>
+
         <div id="code">
             <pre><code class="language-html">
                 <!-- Code will be injected here by JavaScript -->
             </code></pre>
         </div>
-        
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>

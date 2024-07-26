@@ -1,4 +1,10 @@
-/* styles.css */
+:root {
+    --orange: rgb(255, 123, 0);
+    --light: rgb(255, 250, 245);
+    --lightorange : rgb(255, 162, 0);
+    --darkorange : rgb(112, 54, 0);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +13,41 @@
 
 body {
     font-family: Arial, sans-serif;
-    display: flex;
+    /* display: flex; */
     margin: 0;
+    font-size: small;
+}
+
+#app{
+    /* background-color: lightblue; */
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+}
+
+h2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
 }
 
 #image-canvas-container {
+    position: relative;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    /* background-color: pink; */
+    gap: 25px;
 }
 
 #target-image img {
-    max-width: 100%;
-    width: 100px;
-    height: auto;
-    display: block;
+    /* max-width: 100%; */
+    /* width: 100px; */
+    /* height: auto; */
+    display: none;
 }
 
 #target-image {
@@ -30,6 +58,10 @@ body {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    background-image: url('pikachu.png');
+    background-size: contain;
 }
 
 
@@ -39,38 +71,115 @@ body {
     align-items: flex-start;
 }
 
-/* styles.css */
-#code {
-    margin-top: 20px;
-    background-color: #f5f5f5;
-    padding: 10px;
-    border-radius: 5px;
-    width: 80%;
-    overflow-x: auto;
-}
 
 
 .pixel-art, .grid {
     display: grid;
-    grid-template-columns: repeat(4, 30px);
+    grid-template-columns: repeat(4, 50px);
     grid-gap: 2px;
-    margin: 20px 0;
 }
 
 .pixel {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #ddd;
 }
 
-.red {
-    background-color: red;
+
+/* SELECTORS */
+
+#selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.blue {
-    background-color: blue;
+#selectors p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#selectors span {
+    font-weight: bold;
 }
 
 input {
-    margin: 5px;
+    padding: 3px 2px;
+    width: 120px;
+    font-size: smaller;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+    background: #fff;
+    border: 2px solid var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+input[type=checkbox], button {
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--orange);
+    border: 2px solid var(--orange);
+}
+
+input[type="checkbox"]:checked::before {
+    font-family: "Font Awesome 5 Free"; /* Ensure FontAwesome is loaded */
+    content: "\f00c"; /* Unicode for check icon */
+    font-weight: 900;
+    color: white;
+    font-size: 14px;
+    display: block;
+    position: absolute;
+}
+
+button {
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--orange);
+    /* background-color: var(--lightorange); */
+    color:var(--light);
+    /* color:var(--darkorange); */
+    /* border: 2px solid var(--darkorange); */
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: medium;
+    transition: 0.1s;
+    border: none;
+    margin: auto;
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: var(--lightorange);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+
+/* CODE */
+#code {
+    /* background-color: #f5f5f5; */
+    padding: 0 10px;
+    border-radius: 5px;
+    width: 100%;
+    overflow: auto;
+    max-height: 800px;
 }
