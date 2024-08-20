@@ -13,8 +13,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    /* display: flex; */
-    margin: 0;
     font-size: small;
 }
 
@@ -51,6 +49,7 @@ h2 {
 }
 
 #target-image {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,10 +59,19 @@ h2 {
     box-sizing: border-box;
     width: 200px;
     height: 200px;
-    background-image: url('pikachu.png');
+    background-image: url('images/pikachu.png');
     background-size: contain;
 }
 
+#img-btns  {
+    position: absolute;
+    bottom:-20px;
+    width: 100%;
+}
+
+#img-btns button {
+    padding: 0 10px;
+}
 
 #app {
     display: flex;
@@ -71,6 +79,10 @@ h2 {
     align-items: flex-start;
 }
 
+#error {
+    color: red;
+    text-align: center;
+}
 
 
 .pixel-art, .grid {
