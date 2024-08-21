@@ -51,7 +51,7 @@ function applyStyle(selector) {
         displayError('Invalid CSS value');
     }
 
-    const validProperties = ['backgroundColor', 'border', 'borderRadius', 'opacity', 'position', 'left','top','bottom','right', 'display', 'width', 'height', 'transform', 'padding', 'margin', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom', 'margin-left', 'margin-top', 'margin-right', 'margin-bottom', 'zIndex', 'boxShadow'];
+    const validProperties = ['backgroundColor', 'border', 'borderRadius', 'opacity', 'position', 'left','top','bottom','right', 'display', 'width', 'height', 'transform', 'padding', 'margin', 'paddingTop', 'paddingLeft', 'paddingRight', 'paddingBottom', 'marginLeft', 'marginTop', 'marginRight', 'marginBottom', 'zIndex', 'boxShadow'];
     if (!validProperties.includes(selector.property)) {
         displayError('Invalid CSS property');
         return;
