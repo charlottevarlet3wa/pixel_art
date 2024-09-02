@@ -1,3 +1,15 @@
+/*
+colors :
+pikachu : jaune : #ffea03
+pacman : jaune #ffd200
+peach : rose clair #ff8ce8 
+rose foncé : #eb36c6
+beige : #ffebe8
+jaune : #fff700
+
+*/
+
+
 const errorElem = document.getElementById('error');
 
 document.getElementById('apply').addEventListener('click', function() {
@@ -51,7 +63,7 @@ function applyStyle(selector) {
         displayError('Invalid CSS value');
     }
 
-    const validProperties = ['backgroundColor', 'border', 'borderRadius', 'opacity', 'position', 'left','top','bottom','right', 'display', 'width', 'height', 'transform', 'padding', 'margin', 'paddingTop', 'paddingLeft', 'paddingRight', 'paddingBottom', 'marginLeft', 'marginTop', 'marginRight', 'marginBottom', 'zIndex', 'boxShadow'];
+    const validProperties = ['backgroundColor', 'border', 'borderBottom', 'borderTop', 'borderLeft', 'borderRight', 'scale', 'borderRadius', 'opacity', 'position', 'left','top','bottom','right', 'display', 'width', 'height', 'transform', 'padding', 'margin', 'paddingTop', 'paddingLeft', 'paddingRight', 'paddingBottom', 'marginLeft', 'marginTop', 'marginRight', 'marginBottom', 'zIndex', 'boxShadow'];
     if (!validProperties.includes(selector.property)) {
         displayError('Invalid CSS property');
         return;
@@ -173,7 +185,7 @@ document.querySelectorAll('#selectors p input').forEach((input) => {
 const images = [
     {
         name: 'Pikachu',
-        image: 'pikachu.png'
+        image: 'x_pikachu.png'
     },
     {
         name: 'Link',
@@ -185,11 +197,11 @@ const images = [
     },
     {
         name: 'Peach',
-        image: 'peach.jpg'
+        image: 'x_peach.jpg'
     },
     {
         name: 'Pacman',
-        image: 'pacman.jpg'
+        image: 'x_pacman.jpg'
     }
 ];
 
