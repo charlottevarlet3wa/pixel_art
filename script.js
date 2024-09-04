@@ -74,24 +74,21 @@ function applyStyle(selector) {
         const element = document.getElementById(id);
         if (element) {
             element.style[property] = value;
+            displayError("");
         } else {
             displayError('Element not found');
         }
     } else if (selector.checkbox.id === 'checkbox-2') {
-        console.log('id :' +id)
-        console.log('first letter : ' + id[0])
         let newId = id;
         if(id[0] == '.'){
             newId = id.substr(1);
         } 
         const elements = document.getElementsByClassName(newId);
-        console.log('id :' +id)
-        console.log("elements:")
-        console.log(elements)
         if (elements.length > 0) {
             Array.from(elements).forEach(element => {
                 element.style[property] = value;
             });
+            displayError("");
         } else {
             errorElem.textContent = 'No elements found with class ' + id;
         }
@@ -99,6 +96,7 @@ function applyStyle(selector) {
         const element = document.querySelector(id);
         if (element) {
             element.style[property] = value;
+            displayError("");
         } else {
             errorElem.textContent = 'No element found with selector ' + id;
         }
@@ -108,6 +106,7 @@ function applyStyle(selector) {
             elements.forEach(element => {
                 element.style[property] = value;
             });
+            displayError("");
         } else {
             errorElem.textContent = 'No elements found with selector ' + id;
         }
@@ -160,16 +159,16 @@ function displayGridCode() {
 document.addEventListener('DOMContentLoaded', displayGridCode);
 
 // Toggle checkbox when the paragraph is clicked, except when clicking on input elements
-document.querySelectorAll('#selectors p').forEach((paragraph, index) => {
-    paragraph.addEventListener('click', (event) => {
-        if (event.target.tagName.toLowerCase() !== 'input') {
-            const checkbox = document.querySelector(`#checkbox-${index + 1}`);
-            if (checkbox) {
-                checkbox.checked = !checkbox.checked;
-            }
-        }
-    });
-});
+// document.querySelectorAll('#selectors p').forEach((paragraph, index) => {
+//     paragraph.addEventListener('click', (event) => {
+//         if (event.target.tagName.toLowerCase() !== 'input') {
+//             const checkbox = document.querySelector(`#checkbox-${index + 1}`);
+//             if (checkbox) {
+//                 checkbox.checked = !checkbox.checked;
+//             }
+//         }
+//     });
+// });
 
 // Prevent checkbox toggle when clicking on input elements inside the paragraphs
 document.querySelectorAll('#selectors p input').forEach((input) => {
@@ -185,7 +184,7 @@ document.querySelectorAll('#selectors p input').forEach((input) => {
 const images = [
     {
         name: 'Pikachu',
-        image: 'x_pikachu.png'
+        image: 'x_pikachu2.jpg'
     },
     {
         name: 'Link',
